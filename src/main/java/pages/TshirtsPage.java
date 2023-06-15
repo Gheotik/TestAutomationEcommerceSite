@@ -1,5 +1,7 @@
 package pages;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -7,7 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class TshirtsPage {
-	
+	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
+
 	WebDriver driver;
 	
 	public TshirtsPage(WebDriver driver) {
@@ -36,9 +39,9 @@ public class TshirtsPage {
 	
 	public void Verify_wishlist_ErrorBox() {
 		if(wishlist_ErrorBox.getText().contains("You must be logged in to manage your wishlist.")) {
-			System.out.println("Success! Error message displayed");
+			logger.warn("Success! Error message displayed");
 		}else {
-			System.out.println("Failure, Error message didn't display");
+			logger.error("Failure, Error message didn't display");
 		}
 	}
 

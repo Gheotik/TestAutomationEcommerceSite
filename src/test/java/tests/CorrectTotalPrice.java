@@ -83,7 +83,6 @@ public class CorrectTotalPrice {
 		// 13. Verify that Total price is changing and reflecting correct price.
 		ProdP.TestTotalCalculation();
 
-		Thread.sleep(5000);
 	}
 
 	// Closing browser

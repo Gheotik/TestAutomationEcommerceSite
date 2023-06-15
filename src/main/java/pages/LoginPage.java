@@ -1,11 +1,14 @@
 package pages;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LoginPage extends BasePage{
+	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
 
 	WebDriver driver;
 	
@@ -50,10 +53,10 @@ public class LoginPage extends BasePage{
 	public void Verify_CreatAccount_WithInvalidEmail_Field() {
 		
 		if(InvalidEmail_Alert_Text.isDisplayed() == true) {
-			System.out.println("Success! Alert for invalid email was displayed");
-			System.out.println(InvalidEmail_Alert_Text.getText());
+			logger.warn("Success! Alert for invalid email was displayed");
+			logger.warn(InvalidEmail_Alert_Text.getText());
 		}else {
-			System.out.println("Failure, alert for invalid email was not displayed ");
+			logger.error("Failure, alert for invalid email was not displayed ");
 		}
 		
 	}

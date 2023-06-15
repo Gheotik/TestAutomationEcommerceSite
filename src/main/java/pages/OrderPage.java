@@ -1,12 +1,15 @@
 package pages;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class OrderPage {
-	
+	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
+
 	WebDriver driver;
 	
 	public OrderPage(WebDriver driver) {
@@ -22,8 +25,7 @@ public class OrderPage {
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'I confirm my order')]")WebElement IConfirmMyOrder_Payment_Page;
 	@FindBy(how = How.XPATH, using = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")WebElement MyAccount_Button;
 	@FindBy(how = How.XPATH, using = "//p[@class='cheque-indent']/strong[@class='dark']")WebElement Order_Confirmation;
-	//@FindBy(how = How.XPATH, using = "//div[@class='box']/[6]")WebElement OrderReference_Text;
-	
+
 	//InteractiveMethods
 	public void Click_ProceedToCheckout() {
 		ProceedToCheckout_Button.click();
@@ -56,18 +58,12 @@ public class OrderPage {
 	public void Assert_Order_Confirmation() {
 		
 		if(Order_Confirmation.getText().contains("complete")) {
-			System.out.println("Order Verified");
+			logger.warn("Order Verified");
 		}else {
-			System.out.println("Order not completed");
+			logger.warn("Order not completed");
 		}
 		
 	}
-	
-	/*
-	 * public String Get_OrderReference_Text() { String Sub_Str =
-	 * OrderReference_Text.getText(); String Order_Ref_num = Sub_Str.substring(45,
-	 * 53); return Order_Ref_num; }
-	 */
 	
 
 }

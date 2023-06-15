@@ -1,11 +1,14 @@
 package pages;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class CreateAnAccountPage extends BasePage {
+	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
 
 	WebDriver driver;
 	
@@ -120,10 +123,10 @@ public class CreateAnAccountPage extends BasePage {
 
 	public void VerifyErrorAlertForMandatoryFields() {
 		
-		if(ErrorAlertForMandatoryFields.isDisplayed() == true) {
-			System.out.println("Success! Error Alert For Mandatory Fields is displayed");
+		if(ErrorAlertForMandatoryFields.isDisplayed()) {
+			logger.warn("Success! Error Alert For Mandatory Fields is displayed");
 		}else {
-			System.out.println("Failure, Error Alert For Mandatory Fields is not displayed");
+			logger.error("Failure, Error Alert For Mandatory Fields is not displayed");
 		}
 	}
 }

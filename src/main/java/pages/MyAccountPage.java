@@ -1,5 +1,7 @@
 package pages;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -7,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class MyAccountPage {
+	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
 
 	WebDriver driver;
 
@@ -40,5 +43,6 @@ public class MyAccountPage {
 	
 	public void Assert_NameOnAccount(String FirstName, String LastName) {
 		String FullName = FirstName + " " + LastName;
+		logger.warn(FullName);
 	}
 }
