@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.MainPage;
-import pages.tshirtsPage;
+import pages.TshirtsPage;
 import util.BrowserFactory;
 
 /*Test Case - Verify that 'Add to Wishlist' only works after login.
@@ -37,7 +37,7 @@ public class WishListWorksAfterLogin {
 		// 3. Click on sub menu 'T-shirts'.
 		MainP.Click_Tshirts_Button();
 
-		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
+		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
 		// 4. Mouse hover on the second product displayed.
 		ts.hoverOverProduct();
 		// 5. 'Add to Wishlist' will appear on the bottom of that product, click on it.

@@ -12,7 +12,7 @@ public class BrowserFactory {
 	//Open Browser
 	public static WebDriver launchBrowser() {
 		
-		excelReader reader = new excelReader("./data/testdata.xlsx");
+		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
 		String url = reader.getCellData("Sheet2", "url", 2);
 		
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");

@@ -11,9 +11,9 @@ import pages.MainPage;
 import pages.MyAccountPage;
 import pages.OrderPage;
 import pages.ProductPage;
-import pages.tshirtsPage;
+import pages.TshirtsPage;
 import util.BrowserFactory;
-import util.excelReader;
+import util.ExcelReader;
 
 /*Test Case - Automate End to End Buy Order functionality.
 
@@ -47,7 +47,7 @@ public class BuyOrderFunctionality {
 	@Test
 	public void testBuyOrderFunctionality() throws InterruptedException {
 		
-		excelReader reader = new excelReader("./data/testdata.xlsx");
+		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
@@ -66,7 +66,7 @@ public class BuyOrderFunctionality {
 		// 4. Click on sub menu 'T-shirts'.
 		MyAcc.Click_Tshirts_Button();
 
-		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
+		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
 		ts.hoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.

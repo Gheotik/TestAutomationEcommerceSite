@@ -11,7 +11,7 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.MyAccountPage;
 import util.BrowserFactory;
-import util.excelReader;
+import util.ExcelReader;
 
 /*Test Case - Automate User Registration Process
 
@@ -38,7 +38,7 @@ public class UserRegistrationProcess {
 	@Test
 	public void testUserRegistrationProcess() {
 
-		excelReader reader = new excelReader("./data/testdata.xlsx");
+		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
 		String FirstName = reader.getCellData("Sheet3", "FirstName", 2);
 		String LastName = reader.getCellData("Sheet3", "LastName", 2);
 		String Password = reader.getCellData("Sheet3", "Password", 2);

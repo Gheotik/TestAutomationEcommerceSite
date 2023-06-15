@@ -8,12 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class tshirtsPage {
-	private static Logger logger =  LoggerFactory.getLogger(tshirtsPage.class);
+public class TshirtsPage {
+	private static Logger logger =  LoggerFactory.getLogger(TshirtsPage.class);
 
 	WebDriver driver;
 	
-	public tshirtsPage(WebDriver driver) {
+	public TshirtsPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	

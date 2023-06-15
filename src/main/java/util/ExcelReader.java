@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class excelReader {
+public class ExcelReader {
 	// Global Variables
 	public String path;
 	public FileInputStream fis = null;
@@ -18,7 +18,7 @@ public class excelReader {
 	private XSSFCell cell = null;
 
 	// Constructor to initialize variables
-	public excelReader(String path) {
+	public ExcelReader(String path) {
 		this.path = path;
 		try {
 			fis = new FileInputStream(path);
