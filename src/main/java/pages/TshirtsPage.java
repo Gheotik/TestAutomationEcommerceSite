@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class TshirtsPage {
-	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
+	private static Logger logger =  LoggerFactory.getLogger(TshirtsPage.class);
 
 	WebDriver driver;
 	

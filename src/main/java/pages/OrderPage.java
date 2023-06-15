@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class OrderPage {
-	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
+	private static Logger logger =  LoggerFactory.getLogger(OrderPage.class);
 
 	WebDriver driver;
 	

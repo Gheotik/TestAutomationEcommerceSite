@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LoginPage extends BasePage{
-	private static Logger logger =  LoggerFactory.getLogger(CreateAnAccountPage.class);
+	private static Logger logger =  LoggerFactory.getLogger(LoginPage.class);
 
 	WebDriver driver;
 	
