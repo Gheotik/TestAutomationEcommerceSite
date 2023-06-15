@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.MainPage;
-import pages.MyAccountPage;
+import pages.myAccountPage;
 import pages.OrderPage;
 import pages.ProductPage;
 import pages.TshirtsPage;
@@ -60,11 +60,11 @@ public class BuyOrderFunctionality {
 		LoginP.Enter_Password(password);
 		LoginP.Click_Signin_Button();
 
-		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
+		myAccountPage MyAcc = PageFactory.initElements(driver, myAccountPage.class);
 		// 3. Move your cursor over Women's link.
-		MyAcc.Hover_Over_Women_Button();
+		MyAcc.hoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
-		MyAcc.Click_Tshirts_Button();
+		MyAcc.clickTshirtsButton();
 
 		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
@@ -74,15 +74,15 @@ public class BuyOrderFunctionality {
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Increase quantity to 2.
-		ProdP.Enter_Quantity("2");
+		ProdP.enterQuantity("2");
 		// 8. Select size 'L'
-		ProdP.Select_Size("L");
+		ProdP.selectSize("L");
 		// 9. Select color.
-		ProdP.Select_Color();
+		ProdP.selectColor();
 		// 10. Click 'Add to Cart' button.
-		ProdP.Click_AddToCart_Button();
+		ProdP.clickAddToCartButton();
 		// 11. Click 'Proceed to checkout' button.
-		ProdP.Click_ProceedToCheckout_Button();
+		ProdP.clickProceedToCheckoutButton();
 
 		// 12. Complete the buy order process till payment.
 		OrderPage OrderP = PageFactory.initElements(driver, OrderPage.class);

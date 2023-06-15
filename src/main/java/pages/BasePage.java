@@ -9,21 +9,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
 	public int Random_Number_Generator() {
-		int RandNum = (int) (Math.random() * 999 + 100);
-		return RandNum;
+		return (int) (Math.random() * 999 + 100);
 	}
 
 	public int Date_Number_Generator() {
-		int RandNum = (int) (Math.random() * 31 + 1);
-		return RandNum;
+
+		return (int) (Math.random() * 31 + 1);
 	}
 
 	public String Phone_Number_Generator() {
 		int areaCode = (int) (Math.random() * 999 + 100);
 		int firstThree = (int) (Math.random() * 999 + 100);
-		int lastfour = (int) (Math.random() * 9999 + 1000);
-		String PhoneNum = areaCode + " " + firstThree + " " + lastfour;
-		return PhoneNum;
+		int lastFour = (int) (Math.random() * 9999 + 1000);
+		return areaCode + " " + firstThree + " " + lastFour;
 	}
 
 	public void SelectFromDropdownByVisibleText(WebElement element, String input) {
@@ -42,8 +40,7 @@ public class BasePage {
 
 	public double ConvertStringToDouble(WebElement element) {
 		String StringElement = element.getText().substring(1);
-		double DoubleElement = Double.parseDouble(StringElement);
-		return DoubleElement;
+		return Double.parseDouble(StringElement);
 	}
 
 	public void WaitForElement(WebDriver driver, WebElement element) {
