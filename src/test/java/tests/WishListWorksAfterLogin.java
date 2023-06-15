@@ -44,7 +44,7 @@ public class WishListWorksAfterLogin {
 		ts.Click_wishlistProduct();
 		//6. Verify that error message is displayed
 		ts.Verify_wishlist_ErrorBox();
-		
+
 	}
 
 	@AfterMethod
