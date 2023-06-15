@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.MainPage;
-import pages.TshirtsPage;
+import pages.tshirtsPage;
 import util.BrowserFactory;
 
 /*Test Case - Verify that 'Add to Wishlist' only works after login.
@@ -24,12 +24,12 @@ public class WishListWorksAfterLogin {
 
 	//1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
-	public void TestWishListWorksAfterLohin() throws InterruptedException {
+	public void testWishListWorksAfterLogin() throws InterruptedException {
 
 		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
 		// 2. Move your cursor over Women's link.
@@ -37,18 +37,18 @@ public class WishListWorksAfterLogin {
 		// 3. Click on sub menu 'T-shirts'.
 		MainP.Click_Tshirts_Button();
 
-		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
+		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
 		// 4. Mouse hover on the second product displayed.
-		ts.Hover_Over_Product();
+		ts.hoverOverProduct();
 		// 5. 'Add to Wishlist' will appear on the bottom of that product, click on it.
-		ts.Click_wishlistProduct();
+		ts.clickWishlistProduct();
 		//6. Verify that error message is displayed
-		ts.Verify_wishlist_ErrorBox();
+		ts.verifyWishlistErrorBox();
 
 	}
 
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 }

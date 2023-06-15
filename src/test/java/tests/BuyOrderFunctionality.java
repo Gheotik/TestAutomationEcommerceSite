@@ -11,9 +11,9 @@ import pages.MainPage;
 import pages.MyAccountPage;
 import pages.OrderPage;
 import pages.ProductPage;
-import pages.TshirtsPage;
+import pages.tshirtsPage;
 import util.BrowserFactory;
-import util.ExcelReader;
+import util.excelReader;
 
 /*Test Case - Automate End to End Buy Order functionality.
 
@@ -39,15 +39,15 @@ public class BuyOrderFunctionality {
 	// Starting browser and navigating to website
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	// The actual Test
 	@Test
-	public void TestBuyOrderFunctionality() throws InterruptedException {
+	public void testBuyOrderFunctionality() throws InterruptedException {
 		
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
@@ -66,11 +66,11 @@ public class BuyOrderFunctionality {
 		// 4. Click on sub menu 'T-shirts'.
 		MyAcc.Click_Tshirts_Button();
 
-		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
+		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
-		ts.Hover_Over_Product();
+		ts.hoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.
-		ts.Click_More_Button_Product_One();
+		ts.clickMoreButtonProductOne();
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Increase quantity to 2.
@@ -99,8 +99,8 @@ public class BuyOrderFunctionality {
 
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 
 }

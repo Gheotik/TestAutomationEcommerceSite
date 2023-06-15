@@ -10,9 +10,9 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.MyAccountPage;
 import pages.ProductPage;
-import pages.TshirtsPage;
+import pages.tshirtsPage;
 import util.BrowserFactory;
-import util.ExcelReader;
+import util.excelReader;
 
 /*Test Case - Verify that Total Price is reflecting correctly if user changes quantity on 'Shopping Cart Summary' Page.
 Steps to Automate:
@@ -36,14 +36,14 @@ public class CorrectTotalPrice {
 	// Starting browser and navigating to website
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
-	public void TestCorrectTotalPrice() throws InterruptedException {
+	public void testCorrectTotalPrice() throws InterruptedException {
 
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
@@ -62,11 +62,11 @@ public class CorrectTotalPrice {
 		// 4. Click on sub menu 'T-shirts'.
 		MyAcc.Click_Tshirts_Button();
 
-		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
+		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
-		ts.Hover_Over_Product();
+		ts.hoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.
-		ts.Click_More_Button_Product_One();
+		ts.clickMoreButtonProductOne();
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Make sure quantity is set to 1.
@@ -87,7 +87,7 @@ public class CorrectTotalPrice {
 
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 }

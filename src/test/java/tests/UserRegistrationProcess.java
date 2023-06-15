@@ -11,7 +11,7 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.MyAccountPage;
 import util.BrowserFactory;
-import util.ExcelReader;
+import util.excelReader;
 
 /*Test Case - Automate User Registration Process
 
@@ -31,14 +31,14 @@ public class UserRegistrationProcess {
 	// 2. Click on sign in link.
 	// Starting browser and navigating to website
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
-	public void TestUserRegistrationProcess() {
+	public void testUserRegistrationProcess() {
 
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String FirstName = reader.getCellData("Sheet3", "FirstName", 2);
 		String LastName = reader.getCellData("Sheet3", "LastName", 2);
 		String Password = reader.getCellData("Sheet3", "Password", 2);
@@ -91,7 +91,7 @@ public class UserRegistrationProcess {
 
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 }

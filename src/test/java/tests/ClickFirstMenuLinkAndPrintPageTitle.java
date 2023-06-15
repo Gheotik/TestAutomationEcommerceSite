@@ -31,13 +31,13 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	 */
 	//Starting Browser
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	//the actual test
 	@Test
-	public void ClickFirstMenuLinkAndPrintPageTitleTest() {
+	public void clickFirstMenuLinkAndPrintPageTitleTest() {
 
 		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
 		// 4. Get the page title and print it.
@@ -67,8 +67,8 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	// 9. Close the browser.
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 
 }

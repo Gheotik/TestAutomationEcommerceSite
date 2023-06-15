@@ -25,8 +25,8 @@ public class VerifyErrorMessagesForMandatoryFields {
 	WebDriver driver;
 
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
@@ -46,8 +46,8 @@ public class VerifyErrorMessagesForMandatoryFields {
 
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 
 }

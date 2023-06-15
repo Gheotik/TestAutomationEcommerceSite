@@ -25,12 +25,12 @@ public class VerifyInvalidEmailAddressError {
 	// Starting browser and navigating to website
 	// 1. Open link
 	@BeforeMethod
-	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+	public void startBrowser() {
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
-	public void TestVerifyInvalidEmailAddressError() {
+	public void testVerifyInvalidEmailAddressError() {
 		MainPage mainp = PageFactory.initElements(driver, MainPage.class);
 		// 2. Click on sign in link.
 		mainp.ClickOnSignInButton();
@@ -46,8 +46,8 @@ public class VerifyInvalidEmailAddressError {
 
 	// Closing browser
 	@AfterMethod
-	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+	public void closeBrowser() {
+		BrowserFactory.closeBrowser();
 	}
 
 }
