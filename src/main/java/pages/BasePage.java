@@ -22,7 +22,7 @@ public class BasePage {
 	public String Phone_Number_Generator() {
 		int areaCode = (int) (random.nextInt() * 999 + 100);
 		int firstThree = (int) (random.nextInt() * 999 + 100);
-		int lastFour = (int) random.nextInt() * 9999 + 1000);
+		int lastFour = (int) (random.nextInt() * 9999 + 1000);
 		return areaCode + " " + firstThree + " " + lastFour;
 	}
 
