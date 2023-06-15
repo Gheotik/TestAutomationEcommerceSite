@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.MainPage;
-import pages.myAccountPage;
+import pages.MyAccountPage;
 import pages.OrderPage;
 import pages.ProductPage;
 import pages.TshirtsPage;
@@ -60,7 +60,7 @@ public class BuyOrderFunctionality {
 		LoginP.Enter_Password(password);
 		LoginP.Click_Signin_Button();
 
-		myAccountPage MyAcc = PageFactory.initElements(driver, myAccountPage.class);
+		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
 		// 3. Move your cursor over Women's link.
 		MyAcc.hoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.

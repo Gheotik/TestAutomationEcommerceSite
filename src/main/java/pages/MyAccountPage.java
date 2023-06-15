@@ -8,12 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class myAccountPage {
-	private static Logger logger =  LoggerFactory.getLogger(myAccountPage.class);
+public class MyAccountPage {
+	private static Logger logger =  LoggerFactory.getLogger(MyAccountPage.class);
 
 	WebDriver driver;
 
-	public myAccountPage(WebDriver driver) {
+	public MyAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -38,8 +38,8 @@ public class myAccountPage {
 	}
 
 
-	public void assertNameOnAccount(String FirstName, String LastName) {
-		String FullName = FirstName + " " + LastName;
+	public void assertNameOnAccount(String firstName, String lastName) {
+		String FullName = firstName + " " + lastName;
 		logger.warn(FullName);
 	}
 }

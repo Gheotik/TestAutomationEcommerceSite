@@ -42,16 +42,16 @@ public class CreateAnAccountPage extends BasePage {
 		mrRadioButton.click();
 	}
 	
-	public void fillFirstNameField(String FirstName) {
-		firstNameField.sendKeys(FirstName);
+	public void fillFirstNameField(String firstName) {
+		firstNameField.sendKeys(firstName);
 	}
 	
-	public void fillLastNameField(String LastName) {
-		lastNameField.sendKeys(LastName);
+	public void fillLastNameField(String lastName) {
+		lastNameField.sendKeys(lastName);
 	}
 	
-	public void fillPasswordField(String Password) {
-		passwordField.sendKeys(Password);
+	public void fillPasswordField(String password) {
+		passwordField.sendKeys(password);
 	}
 	
 	public void selectDaySelection(String day) {
@@ -83,28 +83,28 @@ public class CreateAnAccountPage extends BasePage {
 		addressLastNameField.sendKeys(aLastName);
 	}
 	
-	public void fillAddressCompanyField(String Company) {
-		addressCompanyField.sendKeys(Company);
+	public void fillAddressCompanyField(String company) {
+		addressCompanyField.sendKeys(company);
 	}
 
-	public void fillAddress1Field(String Address) {
-		address1Field.sendKeys(Address);
+	public void fillAddress1Field(String address) {
+		address1Field.sendKeys(address);
 	}
 
-	public void fillCityField(String City) {
-		cityField.sendKeys(City);
+	public void fillCityField(String city) {
+		cityField.sendKeys(city);
 	}
 
-	public void selectStateField(String State) {
-		SelectFromDropdownByVisibleText(stateField, State);
+	public void selectStateField(String state) {
+		SelectFromDropdownByVisibleText(stateField, state);
 	}
 
-	public void fillZipCodeField(String ZipCode) {
-		zipCodeField.sendKeys(RemoveDecimalPoint(ZipCode));
+	public void fillZipCodeField(String zipCode) {
+		zipCodeField.sendKeys(RemoveDecimalPoint(zipCode));
 	}
 
-	public void selectCountryField(String Country) {
-		SelectFromDropdownByVisibleText(countryField, Country);
+	public void selectCountryField(String country) {
+		SelectFromDropdownByVisibleText(countryField, country);
 	}
 
 	public void fillCellPhoneField() {

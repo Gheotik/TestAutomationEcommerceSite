@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.CreateAnAccountPage;
 import pages.LoginPage;
 import pages.MainPage;
-import pages.myAccountPage;
+import pages.MyAccountPage;
 import util.BrowserFactory;
 import util.ExcelReader;
 
@@ -85,7 +85,7 @@ public class UserRegistrationProcess {
 		CreateAcc.clickRegisterButton();
 
 		// 7. Validate that user is created.
-		myAccountPage MyAccP = PageFactory.initElements(driver, myAccountPage.class);
+		MyAccountPage MyAccP = PageFactory.initElements(driver, MyAccountPage.class);
 		MyAccP.assertNameOnAccount(FirstName, LastName);
 	}
 
